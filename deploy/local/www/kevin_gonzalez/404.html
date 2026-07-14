@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>404 — Página no encontrada | GlowBeauty</title>
+    <link rel="icon" type="image/svg+xml" href="/kevin_gonzalez/favicon.svg" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background: linear-gradient(135deg, #fce8ed 0%, #fdf8f9 50%, #fff5eb 100%);
+        color: #2d1f24;
+        line-height: 1.6;
+      }
+
+      .header {
+        padding: 1.25rem 1.5rem;
+        background: rgba(255, 255, 255, 0.95);
+        border-bottom: 1px solid #ecd8de;
+      }
+
+      .header__logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #2d1f24;
+        text-decoration: none;
+      }
+
+      .header__logo-icon {
+        color: #b84d6f;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1.25rem;
+      }
+
+      .card {
+        width: min(100%, 480px);
+        background: #ffffff;
+        border: 1px solid #ecd8de;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(45, 31, 36, 0.08);
+        padding: 2.5rem 2rem;
+        text-align: center;
+      }
+
+      .code {
+        display: inline-block;
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 1;
+        color: #b84d6f;
+        margin: 0 0 0.5rem;
+      }
+
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin: 0 0 1.75rem;
+        color: #6b5a62;
+      }
+
+      .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.7rem 1.35rem;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: transform 0.15s, background 0.15s;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn--primary {
+        background: #b84d6f;
+        color: #ffffff;
+        border: 2px solid #b84d6f;
+      }
+
+      .btn--primary:hover {
+        background: #9a3d5c;
+        border-color: #9a3d5c;
+      }
+
+      .btn--outline {
+        background: transparent;
+        color: #b84d6f;
+        border: 2px solid #b84d6f;
+      }
+
+      .footer {
+        padding: 1rem 1.5rem;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #6b5a62;
+        border-top: 1px solid #ecd8de;
+        background: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo" href="/kevin_gonzalez/#/">
+        <span class="header__logo-icon" aria-hidden="true">✦</span>
+        GlowBeauty
+      </a>
+    </header>
+
+    <main>
+      <div class="card">
+        <p class="code" aria-hidden="true">404</p>
+        <h1>Página no encontrada</h1>
+        <p>
+          Lo sentimos, la página que buscas no existe o fue movida.
+          Vuelve al inicio o explora nuestra tienda.
+        </p>
+        <div class="actions">
+          <a class="btn btn--primary" href="/kevin_gonzalez/#/">Volver al inicio</a>
+          <a class="btn btn--outline" href="/kevin_gonzalez/#/tienda">Ir a la tienda</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      © GlowBeauty — Todos los derechos reservados
+    </footer>
+  </body>
+</html>
