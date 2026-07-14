@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nueva página | Farmacia Econopharma</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background: linear-gradient(135deg, #e8f5e9 0%, #f4faf5 50%, #f1f8e9 100%);
+        color: #1a2e22;
+        line-height: 1.6;
+      }
+
+      .header {
+        padding: 1.25rem 1.5rem;
+        background: rgba(255, 255, 255, 0.95);
+        border-bottom: 1px solid #c5e1c8;
+      }
+
+      .header__logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #1a2e22;
+        text-decoration: none;
+      }
+
+      .header__logo img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1.5rem;
+      }
+
+      .card {
+        width: min(100%, 32rem);
+        padding: 2.5rem 2rem;
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 12px 40px rgba(26, 46, 34, 0.08);
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: 1.75rem;
+        color: #2e9e4d;
+      }
+
+      p {
+        margin: 0 0 1.5rem;
+        color: #5a7060;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        font-weight: 600;
+        text-decoration: none;
+        background: #2e9e4d;
+        color: #fff;
+      }
+
+      .footer {
+        padding: 1rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: #5a7060;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo" href="/#/">
+        <img src="/favicon.png" alt="" aria-hidden="true" />
+        Farmacia Econopharma
+      </a>
+    </header>
+
+    <main>
+      <div class="card">
+        <h1>Página nueva</h1>
+        <p>
+          Has sido redirigido desde la ruta antigua. Este es el destino de la migración permanente (301).
+        </p>
+        <a class="btn" href="/#/">Volver a la farmacia</a>
+      </div>
+    </main>
+
+    <footer class="footer">© Farmacia Econopharma — Todos los derechos reservados</footer>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+# Apache: servir assets reales y no reescribir .js / .css a index.html
+Options -MultiViews
+
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType text/css .css
+  AddType image/svg+xml .svg
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Si el archivo o carpeta existe, servirlo tal cual
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Solo para rutas que no son archivos (SPA con HashRouter)
+  RewriteRule ^ index.html [L]
+</IfModule>
