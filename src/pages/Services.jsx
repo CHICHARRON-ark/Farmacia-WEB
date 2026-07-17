@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import logoLab from '../assets/LOGO lab 2.png';
 import logoConsultaMed from '../assets/cons med logo.png';
 import logoDental from '../assets/logo dental.png';
@@ -93,9 +95,35 @@ const services = [
     ],
   },
 ];
+
 export default function Services() {
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const seccion = searchParams.get('seccion');
+    if (!seccion) return;
+
+    const scrollToSection = () => {
+      const el = document.getElementById(seccion);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
+    const timer = window.setTimeout(scrollToSection, 50);
+    return () => window.clearTimeout(timer);
+  }, [searchParams]);
+
   return (
     <div className="services-page">
+      <div className="container services-page__toolbar">
+        <Link to="/" className="services-back">
+          <span className="services-back__arrow" aria-hidden="true">
+            ←
+          </span>
+          Volver
+        </Link>
+      </div>
       {services.map((service, index) => (
         <section
           key={service.id}

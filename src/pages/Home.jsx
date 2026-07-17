@@ -3,20 +3,23 @@ import { BRAND } from '../constants/brand';
 import LocationMap from '../components/ui/LocationMap';
 import ContactDetails from '../components/ui/ContactDetails';
 import BusinessHours from '../components/ui/BusinessHours';
-import logo from '../assets/logo 2.png';
+import welcomeBg from '../assets/fondo menu.jpg';
 
 const services = [
   {
     title: 'Consulta médica',
     description: 'Atención profesional para el cuidado de tu salud y la de tu familia.',
+    sectionId: 'consultorio-medico',
   },
   {
     title: 'UME Clínica dental',
     description: 'Limpieza, resinas, extracciones, blanqueamiento, brackets y más.',
+    sectionId: 'consultorio-dental',
   },
   {
     title: 'UME Laboratorios',
     description: 'Estudios de laboratorio con resultados confiables y oportunos.',
+    sectionId: 'laboratorio',
   },
   {
     title: 'Farmacia de genéricos',
@@ -28,8 +31,12 @@ const services = [
 export default function Home() {
   return (
     <>
-      <section className="hero hero--info">
-        <div className="container hero__content hero__content--info">
+      <section className="hero hero--welcome">
+        <div className="hero__media" aria-hidden="true">
+          <img src={welcomeBg} alt="" className="hero__bg" />
+        </div>
+        <div className="hero__scrim" aria-hidden="true" />
+        <div className="container hero__content hero__content--welcome">
           <div className="hero__copy">
             <p className="hero__eyebrow">{BRAND.subtitle}</p>
             <h1 className="hero__title hero__title--wide">{BRAND.name}</h1>
@@ -47,21 +54,29 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="hero__visual">
-            <img src={logo} alt="" className="hero__logo" aria-hidden="true" />
-          </div>
         </div>
       </section>
 
       <section className="section container">
         <h2 className="section__title">Nuestros servicios</h2>
         <div className="info-grid">
-          {services.map((service) => (
-            <article key={service.title} className="info-card">
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </article>
-          ))}
+          {services.map((service) =>
+            service.sectionId ? (
+              <Link
+                key={service.title}
+                to={`/servicios?seccion=${service.sectionId}`}
+                className="info-card info-card--link"
+              >
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </Link>
+            ) : (
+              <article key={service.title} className="info-card">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </article>
+            ),
+          )}
         </div>
       </section>
 
