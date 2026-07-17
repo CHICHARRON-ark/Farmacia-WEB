@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+import BackButton from '../components/ui/BackButton';
 import logoLab from '../assets/LOGO lab 2.png';
 import logoConsultaMed from '../assets/cons med logo.png';
 import logoDental from '../assets/logo dental.png';
@@ -117,12 +118,7 @@ export default function Services() {
   return (
     <div className="services-page">
       <div className="container services-page__toolbar">
-        <Link to="/" className="services-back">
-          <span className="services-back__arrow" aria-hidden="true">
-            ←
-          </span>
-          Volver
-        </Link>
+        <BackButton />
       </div>
       {services.map((service, index) => (
         <section

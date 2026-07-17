@@ -1,3 +1,5 @@
+import BackButton from '../components/ui/BackButton';
+
 const faqs = [
   {
     q: '¿Qué tipo de medicamentos manejan?',
@@ -12,6 +14,9 @@ const faqs = [
 export default function FAQ() {
   return (
     <div className="container page content-page">
+      <div className="page__toolbar">
+        <BackButton />
+      </div>
       <h1>Preguntas frecuentes</h1>
       <dl className="faq-list">
         {faqs.map((item) => (

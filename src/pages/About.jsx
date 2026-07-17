@@ -1,8 +1,12 @@
 import { BRAND } from '../constants/brand';
+import BackButton from '../components/ui/BackButton';
 
 export default function About() {
   return (
     <div className="container page content-page">
+      <div className="page__toolbar">
+        <BackButton />
+      </div>
       <h1>Nosotros</h1>
       <p>
         <strong>{BRAND.name}</strong> es una unidad médica y farmacia de genéricos comprometida con
